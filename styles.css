@@ -1,45 +1,123 @@
-/* Estilo personalizado */
+/* =================================== ROOT =================================== */
+
+/* Estilos base para la página */
 body {
-  background-color: #0e1a2b;
-  color: #f8f9fa;
+  background-color: #0e1a2b; /* Fondo azul oscuro */
+  color: #f8f9fa; /* Texto color blanco claro */
 }
 
+/* =================================== NAVBAR =================================== */
+
+/* Estilos generales para los enlaces del navbar */
+.navbar-nav .nav-link {
+  position: relative; /* Para posicionar pseudo-elementos */
+  transition: color 0.3s ease; /* Transición suave para cambio de color */
+}
+
+/* Color sólido para el fondo de la barra de navegación */
 .navbar {
-  background-color: #061020;
+  background-color: #051928 !important; /* Azul muy oscuro con !important para sobreescribir Bootstrap */
 }
 
+/* Cambio de color de los enlaces al hacer hover o focus */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #0dcaf0; /* Azul claro brillante */
+}
+
+/* Pseudo-elemento para el efecto de subrayado animado */
+.navbar-nav .nav-link::after {
+  content: ''; /* Elemento vacío */
+  display: block;
+  width: 0; /* Inicialmente sin ancho para animar */
+  height: 2px; /* Altura de la línea */
+  background: #0dcaf0; /* Color azul claro */
+  position: absolute; /* Posicionamiento absoluto relativo al enlace */
+  bottom: 0; /* Ubicado al pie del enlace */
+  left: 0; /* Alineado a la izquierda */
+}
+
+/* Expande el subrayado al 100% del ancho del enlace en hover/focus */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  width: 100%;
+}
+
+/* =================================== HERO =================================== */
+
+/* Estilo para la sección hero con fondo imagen y gradiente overlay */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('https://cdn.pixabay.com/photo/2017/01/31/17/44/cyber-security-2026084_1280.jpg')
-      center/cover no-repeat;
-  color: white;
-  padding: 100px 0;
-  text-shadow: 1px 1px 3px black;
+      center/cover no-repeat; /* Imagen centrada y cubierta */
+  color: white; /* Texto blanco */
+  padding: 100px 0; /* Espaciado vertical generoso */
+  text-shadow: 1px 1px 3px black; /* Sombra para mejorar legibilidad */
 }
 
+/* =================================== TARJETAS (CARDS) =================================== */
+
+/* Estilo base de las tarjetas */
 .card {
-  border: none;
-  border-radius: 1rem;
-  background-color: #12263f;
-  color: #e0e0e0;
-  transition: transform 0.3s;
+  background-color: var(--secondary-dark); /* Color de fondo definido en variables CSS */
+  border: 2px solid var(--border-color); /* Borde con color de variable */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición para color, sombra y transformación */
+  color: var(--text-light); /* Color de texto claro */
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1); /* Sombra sutil azulada */
 }
+
+/* Estilo para las tarjetas cuando el mouse pasa por encima */
 .card:hover {
-  transform: scale(1.05);
+  border-color: var(--accent-cyan); /* Cambia el color del borde a un cian destacado */
+  background-color: rgba(0, 212, 255, 0.05); /* Fondo semitransparente azul claro */
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.25); /* Sombra más intensa azul brillante */
+  transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
 }
 
+/* Estilo para los títulos dentro de las tarjetas */
+.card h4 {
+  color: var(--accent-cyan); /* Color cian */
+  margin-top: 1rem; /* Separación superior */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para los iconos dentro de las tarjetas */
+.icono {
+  font-size: 60px; /* Tamaño grande para íconos */
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); /* Sombra azul difusa */
+}
+
+/* =================================== SECCIONES =================================== */
+
+/* Fondo para las secciones que utilizan un fondo más claro oscuro */
 .section-light {
-  background-color: #132542;
+  background-color: #132542; /* Azul oscuro moderado */
 }
 
+/* Estilo para el contenedor del quiz interactivo */
 .quiz-container {
-  background-color: #1a2e4f;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #1a2e4f; /* Azul oscuro */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 2rem; /* Espaciado interno */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
+/* =================================== FOOTER =================================== */
+
+/* Estilo para el pie de página */
 footer {
-  background-color: #061020;
-  color: #ccc;
+  background-color: #061020; /* Azul muy oscuro */
+  color: #ccc; /* Texto gris claro */
+}
+
+/* =================================== TEXTO DINÁMICO =================================== */
+
+/* Estilo para el texto dinámico con efecto máquina de escribir */
+#texto-dinamico {
+  color: #0dcaf0; /* Azul claro */
+  font-weight: bold; /* Texto en negrita */
+  font-family: monospace; /* Fuente monoespaciada para efecto código */
+  min-height: 2rem; /* Altura mínima para evitar salto visual cuando se borra texto */
+  margin-bottom: 1.5rem; /* Separación inferior */
 }
