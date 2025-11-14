@@ -19,29 +19,9 @@ Proyecto web educativo para promover la importancia de la protección de datos y
 - Bootstrap Icons
 - JavaScript (efectos dinámicos y lógica del quiz)
 
-## Estructura del proyecto
+## Integración y uso de AOS Animations
 
-```
-â”œâ”€â”€ index.html
-â”œâ”€â”€ styles.css
-â”œâ”€â”€ script.js
-â”œâ”€â”€ hacker.jpg        # Imagen de fondo hero
-â”œâ”€â”€ lock.png          # Favicon de la página
-â”œâ”€â”€ /otras_imagenes/
-```
-
-## Uso
-
-1. Clona el repositorio o descarga los archivos.
-2. Abre `index.html` en tu navegador.
-3. Explora las secciones informativas y realiza el test de ciberseguridad.
-4. Puedes contactarnos usando el formulario para recibir asesorí­a o dejar tus dudas.
-
-## Personalización
-
-- Cambia el fondo del hero modificando `hacker.jpg`.
-- Ajusta colores y temas a tu conveniencia mediante `styles.css`.
-- Las preguntas del test pueden personalizarse desde el archivo `script.js`.
+Para mejorar la experiencia visual, se ha integrado la librería [AOS](https://michalsnik.github.io/aos/) que permite animar elementos al hacer scroll.
 
 ## Créditos
 

@@ -4,7 +4,7 @@
     <!-- Configuración básica de caracteres y responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="lock.png" />
+    <link rel="icon" type="image/png" href="flock.png" />
     <title>Protección de Datos y Ciberseguridad</title>
 
     <!-- Bootstrap CSS desde CDN para estilos responsive y componentes -->
@@ -12,24 +12,23 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <!-- Iconos Bootstrap para símbolos visuales -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-
     <!-- Estilos personalizados -->
     <link href="styles.css" rel="stylesheet" />
-  </head>
 
+    <!-- AOS CSS para animaciones on scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
   <body>
     <!-- Barra de navegación fija en la parte superior -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
         <!-- Marca o logo del sitio -->
         <a class="navbar-brand fw-bold" href="#">Ciberseguridad</a>
-
         <!-- Botón para mostrar/ocultar menú en móviles -->
         <button
           class="navbar-toggler"
@@ -47,12 +46,13 @@
             <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
             <li class="nav-item"><a class="nav-link" href="#principios">Principios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#quiz">Test </a></li>
+            <li class="nav-item"><a class="nav-link" href="#quiz">Test</a></li>
             <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
     <!-- Sección hero con imagen, overlay y texto destacado -->
     <section
       id="inicio"
@@ -62,16 +62,23 @@
       <div class="overlay"></div>
       <div class="container position-relative">
         <!-- Texto dinámico con efecto máquina de escribir -->
+        <!-- Texto dinámico con efecto máquina de escribir -->
         <h1 id="texto-dinamico" class="mb-3 display-2"></h1>
         <!-- Título principal mejor aprovechado -->
         <h3 class="display-4 fw-bold mb-4">Proteger tu información, es proteger tu futuro</h3>
         <!-- Descripción ampliada -->
-        <p class="lead mb-4">
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="400">
           La ciberseguridad es responsabilidad de todos.<br />
           Aprende a identificar riesgos, proteger tus datos y navegar de forma segura.<br />
           La prevención es tu mejor defensa en el mundo digital.
         </p>
-        <a href="#introduccion" class="btn btn-primary btn-lg mt-3">Comenzar</a>
+        <a
+          href="#introduccion"
+          class="btn btn-primary btn-lg mt-3"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          >Comenzar</a
+        >
       </div>
     </section>
 
@@ -79,16 +86,18 @@
     <section id="introduccion" class="py-5 section-light text-center">
       <div class="container">
         <!-- Título con icono -->
-        <h2 class="fw-bold mb-4"><i class="bi bi-shield-lock"></i> ¿Por qué proteger tus datos?</h2>
+        <h2 class="fw-bold mb-4" data-aos="fade-right">
+          <i class="bi bi-shield-lock"></i> ¿Por qué proteger tus datos?
+        </h2>
         <!-- Texto explicativo con ancho máximo para legibilidad -->
-        <p class="mx-auto" style="max-width: 800px">
+        <p class="mx-auto" style="max-width: 800px" data-aos="fade-left" data-aos-delay="200">
           En la era digital, los datos personales son uno de los recursos más valiosos. Protegerlos
           evita fraudes, robo de identidad y garantiza nuestra privacidad. La ética digital implica
           actuar con responsabilidad y respeto hacia la información propia y ajena.<br /><br />
           Proteger tus datos personales es esencial para evitar que terceros los utilicen de forma
           indebida, ya sea para realizar fraudes, suplantaciones de identidad o acciones dañinas. El
-          control de tu información te permite decidir quién puede acceder a ella y cómo será
-          utilizada.<br /><br />
+          control de tu información te permite decidir quién puede acceder a ella y cómo ser
+          utilizada.
         </p>
       </div>
     </section>
@@ -96,10 +105,11 @@
     <!-- Sección de principios clave con tarjetas -->
     <section id="principios" class="py-5 text-center">
       <div class="container">
-        <h2 class="fw-bold mb-4"><i class="bi bi-shield-check"></i> Principios Clave</h2>
+        <h2 class="fw-bold mb-4" data-aos="zoom-in">
+          <i class="bi bi-shield-check"></i> Principios Clave
+        </h2>
         <div class="row g-4">
-          <!-- Tarjeta 1: Consentimiento -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="flip-left">
             <div class="card p-3">
               <i class="bi bi-person-badge display-4 text-primary"></i>
               <h5 class="mt-3">Consentimiento</h5>
@@ -109,8 +119,7 @@
               </p>
             </div>
           </div>
-          <!-- Tarjeta 2: Seguridad -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
             <div class="card p-3">
               <i class="bi bi-lock-fill display-4 text-success"></i>
               <h5 class="mt-3">Seguridad</h5>
@@ -120,11 +129,10 @@
               </p>
             </div>
           </div>
-          <!-- Tarjeta 3: Responsabilidad Ética -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
             <div class="card p-3">
               <i class="bi bi-people-fill display-4 text-warning"></i>
-              <h5 class="mt-3">Responsabilidad Ética</h5>
+              <h5 class="mt-3">Responsabilidad ética</h5>
               <p>El respeto por la privacidad y los datos ajenos construye confianza digital.</p>
             </div>
           </div>
@@ -133,10 +141,12 @@
     </section>
 
     <!-- Listado de 5 recomendaciones clave para proteger datos personales -->
-    <section class="py-5" id="practicas">
+    <section id="practicas" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-4">Buenas Prácticas para Proteger tus Datos</h2>
-        <ul class="list-group list-group-flush">
+        <h2 class="text-center mb-4" data-aos="fade-up">
+          Buenas Prácticas para Proteger tus Datos
+        </h2>
+        <ul class="list-group list-group-flush" data-aos="fade-up" data-aos-delay="200">
           <li class="list-group-item">Usa contraseñas seguras y únicas para cada cuenta.</li>
           <li class="list-group-item">Activa la autenticación de dos factores (2FA).</li>
           <li class="list-group-item">Evita compartir información personal en redes sociales.</li>
@@ -150,19 +160,14 @@
 
     <!-- Sección del quiz interactivo -->
     <section id="quiz" class="py-5 section-light text-center">
-      <div class="container quiz-container">
-        <!-- Título del test con icono -->
+      <div class="container quiz-container" data-aos="fade-up">
         <h2 class="fw-bold mb-4"><i class="bi bi-question-circle"></i> Test de Ciberseguridad</h2>
-
         <!-- Contenedor donde se cargarán dinámicamente las preguntas -->
         <div id="quiz-content"></div>
-
         <!-- Botón para avanzar a la siguiente pregunta, oculto inicialmente -->
         <button id="btn-next" class="btn btn-primary mt-3" style="display: none">Siguiente</button>
-
         <!-- Área para mostrar feedback luego de responder -->
         <div id="quiz-feedback" class="mt-4 fw-bold"></div>
-
         <!-- Área para mostrar resultado final después del test -->
         <div id="quiz-result" class="mt-4 fw-bold"></div>
       </div>
@@ -172,7 +177,6 @@
     <section id="contacto" class="py-5 text-center">
       <div class="container">
         <h2 class="fw-bold mb-4"><i class="bi bi-envelope"></i> Contáctanos</h2>
-
         <!-- Formulario para enviar consultas -->
         <form class="mx-auto" style="max-width: 600px">
           <div class="mb-3 text-start">
@@ -194,11 +198,17 @@
 
     <!-- Pie de página con derechos reservados -->
     <footer class="text-center py-3 mt-4">
-      <p>© 2025 UTOM | Proyecto Ética y Ciberseguridad | Todos los derechos reservados.</p>
+      <p>© 2025 UTOM Proyecto Ética y Ciberseguridad. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Importación de scripts necesarios -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- AOS JS para animaciones on scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
