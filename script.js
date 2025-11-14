@@ -158,7 +158,7 @@ function seleccionarRespuesta(opcionSeleccionada) {
     puntaje++;
     feedback.innerHTML = '<div class="alert alert-success">✅ ¡Buena práctica!</div>';
   } else {
-    feedback.innerHTML = '<div class="alert alert-danger">⚠️ Mala práctica.</div>';
+    feedback.innerHTML = '<div class="alert alert-danger">❌ Mala práctica </div>';
   }
 
   // Deshabilita todos los botones de opciones para impedir nuevos clics

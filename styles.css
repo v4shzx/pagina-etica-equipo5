@@ -2,7 +2,7 @@
 
 /* Estilos base para la página */
 body {
-  background-color: #0e1a2b; /* Fondo azul oscuro */
+  background-color: #0e1a2b; /* Fondo azul oscuro = 0e1a2b */
   color: #f8f9fa; /* Texto color blanco claro */
 }
 
@@ -16,7 +16,7 @@ body {
 
 /* Color sólido para el fondo de la barra de navegación */
 .navbar {
-  background-color: #051928 !important; /* Azul muy oscuro con !important para sobreescribir Bootstrap */
+  background-color: #000000 !important; /* Azul muy oscuro con !important para sobreescribir Bootstrap */
 }
 
 /* Cambio de color de los enlaces al hacer hover o focus */
@@ -82,7 +82,6 @@ body {
   font-weight: bold; /* Texto en negrita */
 }
 
-/* Estilo para los iconos dentro de las tarjetas */
 .icono {
   font-size: 60px; /* Tamaño grande para íconos */
   filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); /* Sombra azul difusa */
@@ -120,4 +119,45 @@ footer {
   font-family: monospace; /* Fuente monoespaciada para efecto código */
   min-height: 2rem; /* Altura mínima para evitar salto visual cuando se borra texto */
   margin-bottom: 1.5rem; /* Separación inferior */
+}
+
+/* =================================== TEST  =================================== */
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 1rem;
+  }
+  .quiz-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+  .quiz-container i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #quiz-content {
+    margin-top: 1rem;
+  }
+}
+
+/* ========== LISTA DE BUENAS PRÁCTICAS ========== */
+.list-group-item {
+  background-color: rgba(0, 212, 255, 0.08);
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: rgba(0, 255, 136, 0.1);
+  border-color: var(--accent-green);
+  padding-left: 1.75rem;
+}
+
+.list-group-item::before {
+  content: '✓ ';
+  color: var(--accent-green);
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
