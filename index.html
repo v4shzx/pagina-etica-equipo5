@@ -4,6 +4,7 @@
     <!-- Configuración básica de caracteres y responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lock.png" />
     <title>Protección de Datos y Ciberseguridad</title>
 
     <!-- Bootstrap CSS desde CDN para estilos responsive y componentes -->
@@ -52,19 +53,18 @@
         </div>
       </div>
     </nav>
-
-    <!-- Sección hero con imagen y texto destacado -->
+    <!-- Sección hero con imagen, overlay y texto destacado -->
     <section
       id="inicio"
-      class="hero text-center d-flex align-items-center justify-content-center"
-      style="height: 100vh"
+      class="hero hero-bg text-center d-flex align-items-center justify-content-center"
+      style="height: 100vh; position: relative"
     >
-      <div class="container">
+      <div class="overlay"></div>
+      <div class="container position-relative">
         <!-- Texto dinámico con efecto máquina de escribir -->
         <h1 id="texto-dinamico" class="mb-3 display-2"></h1>
-
         <!-- Título principal mejor aprovechado -->
-        <h3 class="display-4 fw-bold mb-4">Protege tu información, protege tu futuro</h3>
+        <h3 class="display-4 fw-bold mb-4">Proteger tu información, es proteger tu futuro</h3>
         <!-- Descripción ampliada -->
         <p class="lead mb-4">
           La ciberseguridad es responsabilidad de todos.<br />
@@ -198,11 +198,7 @@
     </footer>
 
     <!-- Importación de scripts necesarios -->
-
-    <!-- Bootstrap Bundle JS para funcionalidades de componentes -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Archivo JS personalizado con lógica del quiz y texto dinámico -->
     <script src="script.js"></script>
   </body>
 </html>
