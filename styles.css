@@ -102,6 +102,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
+section {
+  scroll-margin-top: 70px; /* Ajusta según la altura real de tu navbar */
+}
+
 /* =================================== FOOTER =================================== */
 
 /* Estilo para el pie de página */
